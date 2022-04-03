@@ -1,4 +1,3 @@
----
 spec_version: '1.0'
 indicators:
   us_dp_hotelcar_Search_90pct: "metricSelector=jmeter.usermetrics.transaction.meantime:filter(and(eq(transaction,\"01US_DP_HotelCar_02LoadSearchResults\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():percentile(90)"
@@ -10,3 +9,6 @@ indicators:
   us_dp_hotelcar_loadConfirmation_90pct: "metricSelector=jmeter.usermetrics.transaction.meantime:filter(and(eq(transaction,\"01US_DP_HotelCar_18LoadConfirmation\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():percentile(90)"
   us_dp_hotelcar_loadConfirmation_error_count: "metricSelector=jmeter.usermetrics.transaction.error:filter(and(eq(transaction,\"01US_DP_HotelCar_18LoadConfirmation\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():sum"
   us_dp_hotelcar_loadConfirmation_count: "metricSelector=jmeter.usermetrics.transaction.count.gauge:filter(and(eq(transaction,\"01US_DP_HotelCar_18LoadConfirmation\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():sum"
+  us_dp_hotelflight_Search_90pct: "metricSelector=jmeter.usermetrics.transaction.meantime:filter(and(eq(transaction,\"01US_DP_HotelFlight_02LoadSearchResults\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():percentile(90)"
+  us_dp_hotelflight_Search_error_count: "metricSelector=jmeter.usermetrics.transaction.error:filter(and(eq(transaction,\"01US_DP_HotelFlight_02LoadSearchResults\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():sum"
+  us_dp_hotelflight_Search_count: "metricSelector=jmeter.usermetrics.transaction.count.gauge:filter(and(eq(transaction,\"01US_DP_HotelFlight_02LoadSearchResults\"),in(\"dt.entity.service\",entitySelector(\"type(service),tag(~\"keptn_service:costcowebapp~\")\")))):splitBy():sum"
