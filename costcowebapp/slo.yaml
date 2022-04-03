@@ -51,29 +51,6 @@ objectives:
     warning:
       - criteria:
           - ">5"
-  - sli: us_dp_hotelcar_PreBookRecap_90pct # pass if (relative change <= 10% AND absolute value is < 10000)
-    pass:
-      - criteria:
-         - "<=+10%"   # relative values require a prefixed sign (plus or minus)
-         - "<10000"   # absolute values only require a logical operator
-    warning:
-      - criteria:
-        - ">11000"
-  - sli: us_dp_hotelcar_PreBookRecap_count
-    pass:
-      - criteria:
-        - ">25"
-    warning:
-      - criteria:
-          - "<10"
-  - sli: us_dp_hotelcar_PreBookRecap_error_count
-    weight: 2
-    pass:
-      - criteria:
-          - "<1"
-    warning:
-      - criteria:
-          - ">5"
 total_score:
   pass: "90%"
   warning: "75%"
