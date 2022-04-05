@@ -16,11 +16,33 @@ objectives:
   - sli: us_dp_hotelcar_Search_count
     pass:
       - criteria:
-        - ">25"
+        - ">15"
     warning:
       - criteria:
           - "<10"
   - sli: us_dp_hotelcar_Search_error_count
+    weight: 2
+    pass:
+      - criteria:
+          - "<1"
+    warning:
+      - criteria:
+          - ">5"
+  - sli: us_dp_hotelcar_PreBookRecap_90pct # pass if (relative change <= 10% AND absolute value is < 10000)
+    pass:
+      - criteria:
+         - "<1000"   # absolute values only require a logical operator
+    warning:
+      - criteria:
+        - ">5000"
+  - sli: us_dp_hotelcar_PreBookRecap_count
+    pass:
+      - criteria:
+        - ">15"
+    warning:
+      - criteria:
+          - "<10"
+  - sli: us_dp_hotelcar_PreBookRecap_error_count
     weight: 2
     pass:
       - criteria:
@@ -39,11 +61,34 @@ objectives:
   - sli: us_dp_hotelflight_Search_count
     pass:
       - criteria:
-        - ">25"
+        - ">15"
     warning:
       - criteria:
           - "<10"
   - sli: us_dp_hotelflight_Search_error_count
+    weight: 2
+    pass:
+      - criteria:
+          - "<1"
+    warning:
+      - criteria:
+          - ">5"
+  - sli: us_dp_hotelflightcar_Search_90pct # pass if (relative change <= 10% AND absolute value is < 10000)
+    pass:
+      - criteria:
+         - "<=+10%"   # relative values require a prefixed sign (plus or minus)
+         - "<10000"   # absolute values only require a logical operator
+    warning:
+      - criteria:
+        - ">11000"
+  - sli: us_dp_hotelflightcar_Search_count
+    pass:
+      - criteria:
+        - ">15"
+    warning:
+      - criteria:
+          - "<10"
+  - sli: us_dp_hotelflightcar_Search_error_count
     weight: 2
     pass:
       - criteria:
